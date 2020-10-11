@@ -2,3 +2,4 @@ build/
 docs/
 thirdparty/Simple-OpenGL-Image-Library
 thirdparty/fann
+src/*.dat
