@@ -13,16 +13,12 @@ sudo apt-get install libglm-dev                       # GLM
 ```
 
 ## Build Thirdparty Libraries from Source
-init and pull the SOIL and FANN submodules
-```bash
-git submodule update --init --recursive --remote
-git submodule foreach git pull origin master
-git submodule foreach git checkout master
-```
-
 ### Build Simple-OpenGL-Image-Library (SOIL)
+the [SOIL library](https://github.com/kbranigan/Simple-OpenGL-Image-Library) is used for loading PNG/JPEG images with OpenGL
 ```bash
-cd thirdparty/Simple-OpenGL-Image-Library
+cd <PROJECT_BASE>/thirdparty
+git clone https://github.com/kbranigan/Simple-OpenGL-Image-Library.git
+cd Simple-OpenGL-Image-Library
 mkdir build
 cd build
 cmake ..
@@ -30,8 +26,11 @@ make # no 'make install' required
 ```
 
 ### Build FANN
+the [FANN library](https://github.com/libfann/fann) is used for the ANN implementation and training
 ```bash
-cd thirdparty/fann
+cd <PROJECT_BASE>/thirdparty
+git clone https://github.com/libfann/fann.git
+cd fann
 cmake .
 make # no 'make install' required
 ```
